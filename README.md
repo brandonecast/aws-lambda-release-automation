@@ -37,8 +37,8 @@ I designed it to mirror a **Release Engineer**’s responsibilities: deploy reli
 - `deploy.sh` — **idempotent deploy** with **waits** + **version publish** + **prod alias**  
 - `verify_release.sh` — quick **post-release checks**  
 - `version.txt` — the release **single source of truth**  
-- `docs/AWS_Lambda_Release_Automation.pdf` — one-page case study  
-- `docs/` — add screenshots here (see table below)
+- `docs/AWS_Lambda_Release_Automation.pdf` — step by step lab report with instructions, AWS screenshot-walk throughs and insights/reflections
+
 
 ---
 
