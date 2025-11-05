@@ -1,36 +1,32 @@
-# aws-lambda-release-automation
-This project demonstrates an end-to-end release automation workflow using AWS Lambda, IAM, and CloudWatch.   It replicates a real-world release engineering environment — deploying, versioning, rolling back, and monitoring releases through automated Linux scripts.
-# AWS Lambda Release Automation 🚀  
-![AWS](https://img.shields.io/badge/AWS-Cloud-orange?logo=amazonaws)
-![Bash](https://img.shields.io/badge/Shell-Bash-green?logo=gnu-bash)
-![Linux](https://img.shields.io/badge/OS-Linux-blue?logo=linux)
-![CI/CD](https://img.shields.io/badge/CI%2FCD-Automation-lightgrey?logo=githubactions)
+# AWS Lambda Release Basics (v2)
 
-### By **Brandon Castaneda**  
-📧 brandonc0914@gmail.com  
-🔗 [LinkedIn](https://www.linkedin.com/in/brandon-c-5b4877369)
+This project demonstrates release automation for AWS Lambda — including deployment, versioning, aliasing, and verification. It simulates real-world release engineering workflows with AWS CLI and Linux shell scripting.
 
----
+## Files
+- **lambda_function.py** — Lambda backend exposing `/health` and `/version` endpoints.
+- **version.txt** — Current release version.
+- **deploy.sh** — Automated deployment script with waits and alias handling.
+- **verify_release.sh** — Tests Lambda health and version after deployment.
+- **README.md** — Documentation for GitHub showcase.
 
-## 🧠 Overview
-This project demonstrates an **end-to-end release automation workflow** using AWS Lambda, IAM, and CloudWatch.  
-It replicates a real-world release engineering environment — deploying, versioning, rolling back, and monitoring releases through automated Linux scripts.
-> It mirrors the Release Engineer workflow by managing deployments, resolving blockers, coordinating between development and operations, and automating release activities with attention to detail and reliability.
-
----
-
-## 🧰 Tech Stack
-- **AWS Lambda** – Serverless compute for releases  
-- **AWS IAM** – Role-based access control  
-- **AWS CloudWatch** – Monitoring and logs  
-- **Bash / Linux** – Automation scripts  
-- **AWS CLI** – Deployment commands  
-- **Version Control** – Git + GitHub  
-
----
-
-## ⚙️ Setup Instructions
-
-### Step 1: Configure Environment
-```bash
-aws configure
+## Usage
+1. Upload ZIP to AWS CloudShell.
+2. Unzip and enter folder:
+   ```bash
+   unzip aws-lambda-release-basics-v2.zip
+   cd aws-lambda-release-basics
+   ```
+3. Configure environment:
+   ```bash
+   export AWS_DEFAULT_REGION=us-east-1
+   export ROLE_ARN=arn:aws:iam::<your-account-id>:role/lambda-basic-role
+   ```
+4. Deploy:
+   ```bash
+   echo "1.0.0" > version.txt
+   bash deploy.sh
+   ```
+5. Verify:
+   ```bash
+   bash verify_release.sh <function-url> 1.0.0
+   ```
