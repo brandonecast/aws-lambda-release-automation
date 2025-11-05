@@ -14,7 +14,6 @@
 This project demonstrates an **end-to-end release automation workflow** on AWS using **Lambda, IAM, CloudWatch** and **Linux/Bash scripting**.  
 I designed it to mirror a **Release Engineer**’s responsibilities: deploy reliably, version and alias releases, verify health, monitor logs, and handle rollbacks—**with clear steps, automation, and attention to detail**.
 
-> **Why this aligns with Veeva Systems (Associate Release Engineer):**  
 > - Coordinate releases & versions ✅  
 > - Automate repeatable steps (scripts) ✅  
 > - Resolve blockers (auth, resource locks) ✅  
@@ -43,6 +42,5 @@ I designed it to mirror a **Release Engineer**’s responsibilities: deploy reli
 
 ---
 
-## 🧭 End-to-End Walkthrough (exact steps I ran)
 
 
