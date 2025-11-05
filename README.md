@@ -15,9 +15,7 @@ This project demonstrates an end-to-end release automation workflow using AWS La
 ## 🧠 Overview
 This project demonstrates an **end-to-end release automation workflow** using AWS Lambda, IAM, and CloudWatch.  
 It replicates a real-world release engineering environment — deploying, versioning, rolling back, and monitoring releases through automated Linux scripts.
-
-> **Why it aligns with Veeva Systems:**  
-> It mirrors the Associate Release Engineer workflow by managing deployments, resolving blockers, coordinating between development and operations, and automating release activities with attention to detail and reliability.
+> It mirrors the Release Engineer workflow by managing deployments, resolving blockers, coordinating between development and operations, and automating release activities with attention to detail and reliability.
 
 ---
 
